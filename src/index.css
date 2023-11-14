@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(203, 201, 201);
+}
+.header {
+  height: 7vh;
+  background-color: white;
+  padding: 10px 10px;
+  display: flex;
+  align-items: center;
+}
+.dropdown {
+  width: 125px;
+  position: relative;
+}
+.dropdown .dropdownBtn {
+  padding: 5px 7px;
+  border: 1px solid rgb(184, 183, 183);
+  background-color: white;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.dropdown .dropdownContent {
+  top: 120%;
+  position: absolute;
+  border: 1px solid rgb(184, 183, 183);
+  border-radius: 10px;
+  color: grey;
+  z-index: 20;
+  background-color: white;
+  width: 270%;
+  padding: 10px 15px;
+}
+
+.dropdown .dropdownContent .dropdownItem .subBtnContainer {
+  margin: 7px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+}
+
+.dropdownItem {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dropdown .dropdownContent .dropdownItem .subDropdownBtn {
+  padding: 5px;
+  background-color: white;
+  border: 1px solid rgb(184, 183, 183);
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 500;
+  width: 150%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.dropdown .dropdownItem .subDropdownContent {
+  top: 105%;
+  position: absolute;
+  left: 50%;
+  z-index: 20;
+  background-color: white;
+  border: 1px solid rgb(184, 183, 183);
+  border-radius: 5px;
+  width: 80%;
+  /* padding: 5px; */
+  color: black;
+}
+
+.dropdown .dropdownItem .subDropdownContent .subDropdownItem {
+  padding: 10px 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dropdown .dropdownItem .subDropdownContent .subDropdownItem:hover {
+  background-color: rgb(184, 183, 183);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.cardContainer h2 {
+  font-size: 1rem;
+  margin: 25px 22px 0px 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.titleContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ticketCard {
+  width: 90%;
+  background-color: white;
+  border: 1px solid rgb(184, 183, 183);
+  border-radius: 5px;
+  margin: 10px 10px 0px 10px;
+  padding: 10px 10px 10px 10px;
+}
+
+.ticketCard .cardId {
+  font-size: 0.9rem;
+  color: gray;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ticketCard .cardTitle {
+  font-size: 1rem;
+  margin: 8px 0;
+  padding: 0 10px 0 0;
+}
+
+.ticketCard .cardTag {
+  font-size: 0.9rem;
+  color: gray;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+@media (max-width: 900px) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    grid-template-columns: 1fr;
+    padding-bottom: 50px;
+  }
+
+  .cardContainer h2 {
+    margin: 30px 10px 0 10px;
+  }
+
+  .ticketCard {
+    width: 95%;
+  }
+}
